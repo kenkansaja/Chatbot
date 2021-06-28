@@ -14,6 +14,8 @@ Ini adalah repo untuk random chat bot atau biasa di kenal sebagai Anonymous Chat
 
 <a href="https://t.me/kenkanasw"><img src="https://img.shields.io/badge/OWNER KAN-blue?style=for-the-badge&logo=Telegram" /></a>
 <a href="https://t.me/musikkugroup"><img src="https://img.shields.io/badge/SUPPORT GROUP-black?style=for-the-badge&logo=Telegram" /></a>
+<a href="https://t.me/Ngobrolprivatbot"><img src="https://img.shields.io/badge/PRIVAT CHAT BOT-red?style=for-the-badge&logo=Telegram" /></a>
+
 
 
 ### CREDIT
