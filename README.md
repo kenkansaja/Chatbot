@@ -1,4 +1,7 @@
-<img src="https://telegra.ph/file/1354c3253eb2bf185d28f.jpg"/>
+<p align="center">
+<img src="https://telegra.ph/file/1354c3253eb2bf185d28f.jpg">
+<p>
+
 # CHATBOT
 
 Ini adalah repo untuk random chat bot atau biasa di kenal sebagai Anonymous Chat
@@ -11,6 +14,7 @@ Ini adalah repo untuk random chat bot atau biasa di kenal sebagai Anonymous Chat
 
 <a href="https://t.me/kenkanasw"><img src="https://img.shields.io/badge/OWNER KAN-blue?style=for-the-badge&logo=Telegram" /></a>
 <a href="https://t.me/musikkugroup"><img src="https://img.shields.io/badge/SUPPORT GROUP-black?style=for-the-badge&logo=Telegram" /></a>
+
 
 ### CREDIT
 
