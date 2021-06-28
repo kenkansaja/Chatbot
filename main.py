@@ -126,7 +126,7 @@ def handle(update):
 							keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="👮OWNER", url="https://t.me/kenkanasw"),InlineKeyboardButton(text="ᴛɪᴋᴛᴏᴋ", url="https://vm.tiktok.com/ZSJC6FWw2/")]])
 							bot.sendMessage(uid,"_⚡️ BOT CHAT ANONYMOUS ⚡️\n\nKAMU DAPAT MENEMUKAN TEMAN\nSECARA RANDOM 🦊 TEKAN [ /start ]_", parse_mode="MarkDown", reply_markup=keyboard1, reply_to_message_id=update['message_id'])
 					else:
-				keyboard1 = ReplyKeyboardMarkup(keyboard=[['Search 🔍'],['Pengguna👤','MENU BOT✅']], resize_keyboard=True, one_time_keyboard=True)
+				#keyboard1 = ReplyKeyboardMarkup(keyboard=[['Search 🔍'],['Pengguna👤','MENU BOT✅']], resize_keyboard=True, one_time_keyboard=True)
 				keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="👮OWNER", url="https://t.me/kenkanasw"),InlineKeyboardButton(text="ɢʀᴜᴘ ᴄʜᴀᴛ", url="t.me/musikkugroup")]])
 				bot.sendMessage(uid, "⚡️ BOT CHAT ANONYMOUS ⚡️\n\n_🇮🇩 Semoga Dapat teman atau jodoh\n🇳🇿 I hope you can make a friend or a partner\n\n?> untuk mencari teman obrolan gunakan perintah /search_", parse_mode='MarkDown', disable_web_page_preview=True , reply_markup=keyboard)
 			        bot.sendMessage(uid,"_[❗️] Follow sosial media dan support terus bot ini_",parse_mode="MarkDown", reply_markup=keyboard1)
