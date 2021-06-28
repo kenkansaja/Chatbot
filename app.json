@@ -1,0 +1,28 @@
+{
+  "name": "Chatbot",
+  "description": "Bot anonymous chat.",
+  "repository": "https://github.com/kenkannih/Chatbot",
+  "logo": "https://telegra.ph/file/0a5b1816a22920e70d3f7.jpg",
+  "env": {
+    "WEBHOOK": {
+      "description": "Menyetel ini ke ANYTHING akan mengaktifkan webhook saat dalam mode env",
+      "value": "ANYTHING"
+    },
+    "TOKEN": {
+      "description": "Dapatkan di @botfather",
+      "value": ""
+    },
+  "addons": [
+  ],
+  "buildpacks": [{
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+ }
+}
+
