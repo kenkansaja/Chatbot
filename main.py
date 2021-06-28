@@ -263,7 +263,7 @@ def handle(update):
 			keyboard = ReplyKeyboardMarkup(keyboard=[
 				['Info Profile 📌','Covid-19〽️'],['🔙 Main Menu']
 			], resize_keyboard=True, one_time_keyboard=True)
-			bot.sendMessage(uid, "Welcome My boo🙊\nYuk Join My Grup @caritemanh dan Channel @haluituenakkkk :)", reply_markup=keyboard)
+			bot.sendMessage(uid, "Welcome My boo🙊\nYuk Join My Grup @musikkugroup dan Channel musikkuchannel :)", reply_markup=keyboard)
 
 		elif text == 'Covid-19〽️':
 			web = requests.get('https://www.worldometers.info/coronavirus/country/indonesia/')
