@@ -11,7 +11,7 @@ import json
 from glob import glob
 import pytz
 from datetime import datetime
-from config import TOKEN
+from config import TOKEN, ADMIN
 from TikTokApi import TikTokApi
 
 token = TOKEN
@@ -31,7 +31,7 @@ def saveConfig(data):
 
 if __name__ == '__main__':
 	s = time.time()
-	print('[#] Buatan\n[i] Created by Davi ALFajr\n')
+	print('[#] Buatan\n[i] Created by KEN KAN\n')
 	print('[#] mengecek config...')
 	if not os.path.isfile('config.json'):
 		print('[#] memebuat config file...')
