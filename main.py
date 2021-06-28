@@ -11,7 +11,7 @@ import json
 from glob import glob
 import pytz
 from datetime import datetime
-from config import TOKEN, ADMIN
+from config import TOKEN, ADMIN, OWNER, CHANNEL, GROUP
 from TikTokApi import TikTokApi
 
 token = TOKEN
@@ -31,7 +31,7 @@ def saveConfig(data):
 
 if __name__ == '__main__':
 	s = time.time()
-	print('[#] Buatan\n[i] Created by KEN KAN\n')
+	print(f'[#] Buatan\n[i] Created by {OWNER}\n')
 	print('[#] mengecek config...')
 	if not os.path.isfile('config.json'):
 		print('[#] memebuat config file...')
@@ -113,7 +113,7 @@ def handle(update):
 			
 			if 'dice' in update:
 				dice = update["dice"]["emoji"]
-				keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url="https://t.me/kenkanasw")]])
+				keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}")]])
 				bot.sendDice(queue["occupied"][uid],emoji=dice,reply_markup=keyboard)
 
 		if text == "/start" or text == "/refresh":
@@ -124,11 +124,11 @@ def handle(update):
 				#		with open('is.txt', 'w') as f:
 				#			f.write(user_ids+"\n"+str(uid))
 				#			keyboard1 = ReplyKeyboardRemove()
-				#			#keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url="https://t.me/kenkanasw"),InlineKeyboardButton(text="ᴛɪᴋᴛᴏᴋ", url="https://vm.tiktok.com/ZSJC6FWw2/")]])
+				#			#keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}"),InlineKeyboardButton(text="ᴛɪᴋᴛᴏᴋ", url="https://vm.tiktok.com/ZSJC6FWw2/")]])
 				#			bot.sendMessage(uid,"_⚡️ BOT CHAT ANONYMOUS ⚡️\n\nKAMU DAPAT MENEMUKAN TEMAN\nSECARA RANDOM 🦊 TEKAN [ /start ]_", parse_mode="MarkDown", reply_markup=keyboard1, reply_to_message_id=update['message_id'])
 				#	else:
 				#keyboard1 = ReplyKeyboardMarkup(keyboard=[['Search 🔍'],['Pengguna👤','MENU BOT✅']], resize_keyboard=True, one_time_keyboard=True)
-				keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url="https://t.me/kenkanasw"),InlineKeyboardButton(text="ɢʀᴜᴘ ᴄʜᴀᴛ", url="t.me/musikkugroup")]])
+				keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}"),InlineKeyboardButton(text="ɢʀᴜᴘ ᴄʜᴀᴛ", url=f"t.me/{GROUP}")]])
 				bot.sendMessage(uid, "⚡️ BOT CHAT ANONYMOUS ⚡️\n\n_🇮🇩 Semoga Dapat teman atau jodoh\n🇳🇿 I hope you can make a friend or a partner\n\n?> untuk mencari teman obrolan gunakan perintah /search_", parse_mode='MarkDown', disable_web_page_preview=True , reply_markup=keyboard)
 						#bot.sendMessage(uid,"_[❗️] Follow sosial media dan support terus bot ini_",parse_mode="MarkDown", reply_markup=keyboard1)
 
@@ -136,7 +136,7 @@ def handle(update):
 			if not uid in queue["occupied"]:
 				if text != "/start" and text != "Pengguna👤" and text !="Next ▶️" and text != "/refresh" and text != "/help" and text != "/search" and text != "Search 🔍" and text != "MENU BOT✅" and text != "🔙 Main Menu" and text != "/trendingtiktok" and text != "RandomPhoto📷" and text != "Info Profile 📌" and text != "Covid-19〽️" and text != "/mabar" and text != "Link Kejutan" and text != "Youtube▶️" and text != "/user":
 					news = ReplyKeyboardRemove()
-					#news = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="ɢʀᴏᴜᴘ ᴄʜᴀᴛ", url="t.me/musikkugroup"), InlineKeyboardButton(text="𝔽𝕆𝕃𝕃𝕆𝕎 𝕄𝔼", url="https://t.me/kenkanasw")]])
+					#news = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="ɢʀᴏᴜᴘ ᴄʜᴀᴛ", url=f"t.me/{GROUP}"), InlineKeyboardButton(text="𝔽𝕆𝕃𝕃𝕆𝕎 𝕄𝔼", url=f"https://t.me/{OWNER}")]])
 					bot.sendMessage(uid, "_[❗️] Maap kamu sedang tidak dalam obrolan\nSilahkan Klik /refresh atau /search pada bot_", parse_mode="MarkDown",reply_markup=news, reply_to_message_id=update['message_id'])
 					# pesan = bot.sendMessage(uid, "Wait...", reply_markup=keyboarddihapus)
 					# time.sleep(4)
@@ -195,7 +195,7 @@ def handle(update):
 					descripsi = str(tiktok['desc'])
 					uid1 = update["chat"]["id"]
 					inline = InlineKeyboardMarkup(inline_keyboard=[
-						[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url='https://t.me/kenkanasw'), InlineKeyboardButton(text="GRUP CHAT", url="t.me/musikkugroup")]])
+						[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f'https://t.me/{OWNER}'), InlineKeyboardButton(text="GRUP CHAT", url=f"t.me/{GROUP}")]])
 					bot.sendMessage(uid1, f"LINK VIDEO = [DISINI]({link})\nUSERNAME TIKTOK = [DISINI](https://www.tiktok.com/@{userid})\nDESKRIPSI VIDEO ⬇️⬇️\n\n{descripsi}", parse_mode="Markdown", reply_markup=inline, reply_to_message_id=update['message_id'])
 					time.sleep(2)
 
@@ -263,7 +263,7 @@ def handle(update):
 			keyboard = ReplyKeyboardMarkup(keyboard=[
 				['Info Profile 📌','Covid-19〽️'],['🔙 Main Menu']
 			], resize_keyboard=True, one_time_keyboard=True)
-			bot.sendMessage(uid, "Welcome My boo🙊\nYuk Join My Grup @musikkugroup dan Channel @musikkuchannel :)", reply_markup=keyboard)
+			bot.sendMessage(uid, "Welcome My boo🙊\nYuk Join My Grup (f"@{GROUP}") dan Channel (f"@{CHANNEL}") :)", reply_markup=keyboard)
 
 		elif text == 'Covid-19〽️':
 			web = requests.get('https://www.worldometers.info/coronavirus/country/indonesia/')
