@@ -2,7 +2,7 @@
   "name": "Chatbot",
   "description": "Bot anonymous chat.",
   "repository": "https://github.com/kenkannih/Chatbot",
-  "logo": "https://telegra.ph/file/0a5b1816a22920e70d3f7.jpg",
+  "logo": "https://telegra.ph/file/1354c3253eb2bf185d28f.jpg",
   "env": {
     "ADMIN": {
       "description": "Isi dengan id admin",
