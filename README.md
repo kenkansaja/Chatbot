@@ -1,3 +1,4 @@
+<img src="https://telegra.ph/file/1354c3253eb2bf185d28f.jpg"/>
 # CHATBOT
 
 Ini adalah repo untuk random chat bot atau biasa di kenal sebagai Anonymous Chat
