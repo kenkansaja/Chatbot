@@ -8,6 +8,10 @@
       "description": "Menyetel ini ke ANYTHING akan mengaktifkan webhook saat dalam mode env",
       "value": "ANYTHING"
     },
+    "HEROKU_APP_NAME": {
+      "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
+      "required": true
+    },
     "TOKEN": {
       "description": "Dapatkan di @botfather",
       "value": ""
