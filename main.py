@@ -11,7 +11,7 @@ import json
 from glob import glob
 import pytz
 from datetime import datetime
-from config import TOKEN
+from config import TOKEN, ADMIN
 from TikTokApi import TikTokApi
 
 token = TOKEN
