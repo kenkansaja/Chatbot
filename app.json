@@ -4,9 +4,9 @@
   "repository": "https://github.com/kenkannih/Chatbot",
   "logo": "https://telegra.ph/file/0a5b1816a22920e70d3f7.jpg",
   "env": {
-    "WEBHOOK": {
-      "description": "Menyetel ini ke ANYTHING akan mengaktifkan webhook saat dalam mode env",
-      "value": "ANYTHING"
+    "ADMIN": {
+      "description": "Isi dengan id admin",
+      "value": ""
     },
     "HEROKU_APP_NAME": {
       "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
