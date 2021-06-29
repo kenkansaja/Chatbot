@@ -30,7 +30,7 @@ def saveConfig(data):
 
 if __name__ == '__main__':
 	s = time.time()
-	print(f'[#] Buatan\n[i] Created by {OWNER}\n')
+	print(f'[#] Buatan\n[i] Created by https://t.me/{OWNER}\n')
 	print('[#] mengecek config...')
 	if not os.path.isfile('config.json'):
 		print('[#] memebuat config file...')
@@ -38,7 +38,7 @@ if __name__ == '__main__':
 		print('[#] Done')
 	else:
 		print('[#] Config found!')
-	print('[i] Bot online ' + str(time.time() - s) + 's')
+	print('[i] Bot sudah bisa di pake ' + str(time.time() - s) + 's')
 def exList(list, par):
 	a = list
 	a.remove(par)
