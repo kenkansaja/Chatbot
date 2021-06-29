@@ -23,22 +23,21 @@ queue = {
 }
 users = []
 user3 = []
-ADMIN = [' ']
 
 def saveConfig(data):
-	return open('config.json', 'w').write(json.dumps(data))
+	return open('app.json', 'w').write(json.dumps(data))
 
 if __name__ == '__main__':
 	s = time.time()
-	print(f'[#] Buatan\n[i] Created by https://t.me/{OWNER}\n')
+	print(f'[#] Buatan\n[i] Created by {OWNER}\n')
 	print('[#] mengecek config...')
-	if not os.path.isfile('config.json'):
+	if not os.path.isfile('app.json'):
 		print('[#] memebuat config file...')
-		open('config.json', 'w').write('{}')
+		open('app.json', 'w').write('{}')
 		print('[#] Done')
 	else:
 		print('[#] Config found!')
-	print('[i] Bot sudah bisa di pake ' + str(time.time() - s) + 's')
+	print('[i] Bot online ' + str(time.time() - s) + 's')
 def exList(list, par):
 	a = list
 	a.remove(par)
@@ -48,7 +47,7 @@ def handle(update):
 		
 	global queue
 	try:
-		config = json.loads(open('config.json', 'r').read())
+		config = json.loads(open('app.json', 'r').read())
 		if 'text' in update:
 			text = update["text"]
 		else:
@@ -64,25 +63,21 @@ def handle(update):
 
 		if uid in queue["occupied"]:
 			if 'text' in update:
-				if text != "/next" and text != "❌ Exit" and text != "Next ▶️" and text != "/exit":
+				if text != "/exit" and text != "❌ Exit" and text != "Next ▶️" and text != "/next":
 					bot.sendMessage(queue["occupied"][uid], "" + text)
 			
 			if 'photo' in update:
-				captionphoto = update["caption"] if "caption" in update else None
 				photo = update['photo'][0]['file_id']
 				bot.sendPhoto(queue["occupied"][uid], photo, caption=captionphoto)
 			if 'video' in update:
-				captionvideo = update["caption"] if "caption" in update else None
 				video = update['video']['file_id']
 				bot.sendVideo(queue["occupied"][uid], video, caption=captionvideo)
 				
 			if 'document' in update:
-				captionducument = update["caption"] if "caption" in update else None
 				document = update['document']['file_id']
 				bot.sendDocument(queue["occupied"][uid], document, caption=captionducument)
 				
 			if 'audio' in update:
-				captionaudio = update["caption"] if "caption" in update else None
 				audio = update['audio']['file_id']
 				bot.sendAudio(queue["occupied"][uid], audio, caption=captionaudio)
 				
@@ -91,7 +86,6 @@ def handle(update):
 				bot.sendVideoNote(queue["occupied"][uid], video_note)
 			
 			if 'voice' in update:
-				captionvoice = update["caption"] if "caption" in update else None
 				voice = update['voice']['file_id']
 				bot.sendVoice(queue["occupied"][uid], voice, caption=captionvoice)
 
@@ -103,46 +97,18 @@ def handle(update):
 				nama = update["contact"]["first_name"]
 				contact = update['contact']['phone_number']
 				bot.sendContact(queue["occupied"][uid], contact, first_name=nama, last_name=None)
-			
-			if 'dice' in update:
-				dice = update["dice"]["emoji"]
-				keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}")]])
-				bot.sendDice(queue["occupied"][uid],emoji=dice,reply_markup=keyboard)
+		
 
 		if text == "/start" or text == "/refresh":
 			if not uid in queue["occupied"]:
 				keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}"),InlineKeyboardButton(text="ɢʀᴜᴘ ᴄʜᴀᴛ", url=f"t.me/{GROUP}")]])
-				bot.sendMessage(uid, f"⚡️ SELAMAT DATANG DI {PROJECT_NAME} ⚡️\n\n_🇮🇩 Semoga Dapat teman atau jodoh\n🇳🇿 I hope you can make a friend or a partner\n\n💬 untuk mencari teman obrolan gunakan perintah /search_", parse_mode='MarkDown', disable_web_page_preview=True , reply_markup=keyboard)
+				bot.sendMessage(uid, f"⚡️ SELAMAT DATANG DI {PROJECT_NAME} ⚡️\n\n_🇮🇩 Semoga Dapat teman atau jodoh\n🇳🇿 I hope you can make a friend or a partner\n\n?> untuk mencari teman obrolan gunakan perintah /search_", parse_mode='MarkDown', disable_web_page_preview=True , reply_markup=keyboard)
 		if 'message_id' in update:
 			if not uid in queue["occupied"]:
-				if text != "/start" and text != "Pengguna👤" and text !="Next ▶️" and text != "/refresh" and text != "/help" and text != "/search" and text != "Search 🔍" and text != "MENU BOT✅" and text != "🔙 Main Menu" and text != "/trendingtiktok" and text != "RandomPhoto📷" and text != "Info Profile 📌" and text != "Covid-19〽️" and text != "/mabar" and text != "Link Kejutan" and text != "Youtube▶️" and text != "/user":
+				if text != "/start" and text != "Pengguna👤" and text !="Next ▶️" and text != "/refresh" and text != "/help" and text != "/search" and text != "Search 🔍" and text != "MENU BOT✅" and text != "🔙 Main Menu" and text != "RandomPhoto📷" and text != "Info Profile 📌" and text != "Covid-19〽️"  and text != "/user":
 					news = ReplyKeyboardRemove()
 					bot.sendMessage(uid, "_[❗️] Maap kamu sedang tidak dalam obrolan\nSilahkan Klik /refresh atau /search pada bot_", parse_mode="MarkDown",reply_markup=news, reply_to_message_id=update['message_id'])
-		if text == "/mabar":
-			if not uid in queue["occupied"]:
-				if str(uid) in ADMIN :
-					pesan = "Mode game aktif"
-					keyboard = ReplyKeyboardMarkup(keyboard=[['ML','PUBG','FF'],['🔙 Main Menu']], resize_keyboard=True, one_time_keyboard=True)
-					bot.sendMessage(uid, pesan, reply_markup=keyboard, reply_to_message_id=update['message_id'])
-				else:
-					bot.sendDice(uid,emoji="🎳")
-					bot.sendMessage(uid, "⚡️ Perintah ini hanya untuk admin ⚡️")
-
-		if text == "/trendingtiktok":
-			if not uid in queue["occupied"]:
-				verifyFp="verify_kqaznovn_mCKIkR6U_EB6J_4BAs_8a2g_YDUsz06lGKRk"
-				api = TikTokApi.get_instance()
-				results = 10
-				trending = api.trending(count=results, custom_verifyFp=verifyFp)
-				for tiktok in trending:
-					link = str(tiktok['video']['downloadAddr'])
-					userid = str(tiktok['author']['uniqueId'])
-					descripsi = str(tiktok['desc'])
-					uid1 = update["chat"]["id"]
-					inline = InlineKeyboardMarkup(inline_keyboard=[
-						[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f'https://t.me/{OWNER}'), InlineKeyboardButton(text="GRUP CHAT", url=f"t.me/{GROUP}")]])
-					bot.sendMessage(uid1, f"LINK VIDEO = [DISINI]({link})\nUSERNAME TIKTOK = [DISINI](https://www.tiktok.com/@{userid})\nDESKRIPSI VIDEO ⬇️⬇️\n\n{descripsi}", parse_mode="Markdown", reply_markup=inline, reply_to_message_id=update['message_id'])
-					time.sleep(2)
+		
 
 		if text == "/test":
 			if not uid in queue["occupied"]:
@@ -152,7 +118,7 @@ def handle(update):
 				bot.sendMessage(uid, "contoh", reply_markup=lolt)
 
 		elif text == "Pengguna👤":
-			file = json.loads(open("config.json", "r").read())
+			file = json.loads(open("app.json", "r").read())
 			text = "Pengguna Online Saat Ini : " + str(len(file)) + " Online👤"
 			bot.sendMessage(uid, text)
 
