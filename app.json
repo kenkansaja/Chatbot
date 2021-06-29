@@ -15,6 +15,18 @@
     "TOKEN": {
       "description": "Dapatkan di @botfather",
       "value": ""
+    },
+    "OWNER": {
+      "description": "Isi dengan username kalian tanpa tanda @",
+      "value": ""
+    },
+    "GROUP": {
+      "description": "Isi dengan username group kalian tanpa tanda @",
+      "value": ""
+    },
+    "CHANNEL": {
+      "description": "Isi dengan username channel kalian tanpa tanda @",
+      "value": ""
     }
   }
 }
