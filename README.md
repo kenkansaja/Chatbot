@@ -36,6 +36,7 @@ Ini adalah repo untuk random chat bot atau biasa di kenal sebagai Anonymous Chat
  next - Melewati lawan bicara saat ini
  search - Mencari lawan ngobrol
  exit - Keluar obrolan / menghentikan obrolan
+ refresh - Memperbarui ulang
 
 ```
 Tinggal salin tempel ke pengaturan edit bot edit command di bot father
