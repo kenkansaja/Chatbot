@@ -1,4 +1,14 @@
 <p align="center">
+  <a href="https://github.com/kenkannih/Chatbot/fork">
+    <img src="https://img.shields.io/github/forks/kenkannih/Chatbot?label=Fork&style=social">
+    
+  </a>
+  <a href="https://github.com/kenkannih/Chatbot">
+    <img src="https://img.shields.io/github/stars/kenkannih/Chatbot?style=social">
+  </a>
+</p>  
+
+<p align="center">
 <img src="https://telegra.ph/file/1354c3253eb2bf185d28f.jpg">
 <p>
 
