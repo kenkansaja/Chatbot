@@ -1,0 +1,39 @@
+{
+  "name": "Chatbot",
+  "description": "Bot anonymous chat.",
+  "repository": "https://github.com/kenkannih/Chatbot",
+  "logo": "https://telegra.ph/file/1354c3253eb2bf185d28f.jpg",
+  "env": {
+    "ADMIN": {
+      "description": "Isi dengan id admin",
+      "value": ""
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
+      "required": true
+    },
+    "TOKEN": {
+      "description": "Dapatkan di @botfather",
+      "value": ""
+    },
+    "OWNER": {
+      "description": "Isi dengan username kalian tanpa tanda @",
+      "value": ""
+    },
+    "GROUP": {
+      "description": "Isi dengan username group kalian tanpa tanda @ kalau gak punya gak usah isi",
+      "required":false,
+      "value": "musikkugroup"
+    },
+    "PROJECT_NAME": {
+      "description": "Isi dengan nama project bot kalian",
+      "required": false,
+      "value": "PRIVATE CHAT"
+    },
+    "CHANNEL": {
+      "description": "Isi dengan username channel kalian tanpa tanda @ kalau gak punya gak usah isi",
+      "required": false,
+      "value": "musikkuchannel"
+    }
+  }
+}
