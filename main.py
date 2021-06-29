@@ -23,7 +23,7 @@ queue = {
 }
 users = []
 user3 = []
-ADMIN = []
+ADMIN = [' ']
 
 def saveConfig(data):
 	return open('config.json', 'w').write(json.dumps(data))
