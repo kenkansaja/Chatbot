@@ -69,7 +69,8 @@ def handle(update):
 			
 			if 'photo' in update:
 				captionphoto = update["caption"] if "caption" in update else None
-				photo = 
+				photo = update['photo'][0]['file_id']
+				bot.sendPhoto(queue["occupied"][uid], photo, caption=captionphoto)
 			if 'video' in update:
 				captionvideo = update["caption"] if "caption" in update else None
 				video = update['video']['file_id']
