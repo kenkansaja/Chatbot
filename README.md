@@ -42,8 +42,8 @@ Tinggal salin tempel ke pengaturan edit bot edit command di bot father
 
 ### CREDIT
 
-* [DAVI](https://github.com/davi78/chatbotdavi) - Carti Teman
-* [KEN KAN](https://github.com/kenkannih/Chatbot)
+* [DAVI](https://github.com/davi78/chatbotdavi) - chatbotdavi
+* [KEN KAN](https://github.com/kenkannih/Chatbot) - Chatbot
 
 
 
