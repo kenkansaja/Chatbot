@@ -11,11 +11,11 @@ import json
 from glob import glob
 import pytz
 from datetime import datetime
-from config import TOKEN, ADMIN, OWNER, CHANNEL, GROUP
+from config import TOKEN, ADMIN, OWNER, CHANNEL, GROUP, PROJECT_NAME
 from TikTokApi import TikTokApi
 
 token = TOKEN
-#"1626343681:AAH6zWFB1TnDoR6FmlFlqQNsgIRDP__C3qE"
+
 bot = amanobot.Bot(token)
 
 queue = {
@@ -129,7 +129,7 @@ def handle(update):
 				#	else:
 				#keyboard1 = ReplyKeyboardMarkup(keyboard=[['Search 🔍'],['Pengguna👤','MENU BOT✅']], resize_keyboard=True, one_time_keyboard=True)
 				keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER}"),InlineKeyboardButton(text="ɢʀᴜᴘ ᴄʜᴀᴛ", url=f"t.me/{GROUP}")]])
-				bot.sendMessage(uid, "⚡️ BOT CHAT ANONYMOUS ⚡️\n\n_🇮🇩 Semoga Dapat teman atau jodoh\n🇳🇿 I hope you can make a friend or a partner\n\n?> untuk mencari teman obrolan gunakan perintah /search_", parse_mode='MarkDown', disable_web_page_preview=True , reply_markup=keyboard)
+				bot.sendMessage(uid, f"⚡️ SELAMAT DATANG DI {PROJECT_NAME} ⚡️\n\n_🇮🇩 Semoga Dapat teman atau jodoh\n🇳🇿 I hope you can make a friend or a partner\n\n?> untuk mencari teman obrolan gunakan perintah /search_", parse_mode='MarkDown', disable_web_page_preview=True , reply_markup=keyboard)
 						#bot.sendMessage(uid,"_[❗️] Follow sosial media dan support terus bot ini_",parse_mode="MarkDown", reply_markup=keyboard1)
 
 		if 'message_id' in update:
