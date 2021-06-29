@@ -24,6 +24,10 @@
       "description": "Isi dengan username group kalian tanpa tanda @",
       "value": ""
     },
+    "PROJECT_NAME": {
+      "description": "Isi dengan nama project bot kalian",
+      "value": ""
+    },
     "CHANNEL": {
       "description": "Isi dengan username channel kalian tanpa tanda @",
       "value": ""
