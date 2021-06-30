@@ -114,7 +114,7 @@ def handle(update):
 			bot.sendMessage(uid, text)
 
 		elif text == '/sharelink':
-			if str(uid) in ADMIN :
+			if str(uid) in queue:
 				name = update["from"]["first_name"]
 				_id = update["from"]["id"]
 				username = update["from"]["username"]
@@ -134,7 +134,7 @@ def handle(update):
 				bot.sendMessage(uid, f"Nama = {name}\nID = `{_id}`\nBahasa = {bahasa}", parse_mode="MarkDown")
 
 		elif text == "/search":
-			if not uid in queue["occupied"]:
+			if uid in queue["occupied"]:
 				keyboard = ReplyKeyboardRemove()
 				bot.sendMessage(uid, '_Sedang mencari pasangan ngobrol kamu, Mohon tunggu sebentar..._',parse_mode='MarkDown', reply_markup=keyboard)
 				print("[SB] " + str(uid) + " Join ke obrolan")
