@@ -17,6 +17,12 @@
 🇺 🇸 🇦 🇭 🇦 🇮 🇳   🇰 🇦 🇸 🇮 🇭   
 🇧 🇮 🇳 🇹 🇦 🇳 🇬   🇾 🇦
 
+## KETERANGAN
+Di repo ada dua jenis main:
+1. main.py - ini tidak ada button query
+2. main.txt - ada query
+Kalau mau gunakan yang mana aja terserah tinggal ganti nama aja atau di bolak balik, soalnya yang jalan hanya main.py
+
 # CHATBOT
 
 Ini adalah repo untuk random chat bot atau biasa di kenal sebagai Anonymous Chat
@@ -38,6 +44,16 @@ refresh - Memperbarui ulang
 exit - Keluar obrolan
 
 ```
+
+### CMD UNTUK [@botfather](https://t.me/botfather)
+```
+next - Melewati lawan bicara saat ini
+search - Mencari lawan ngobrol
+refresh - Memperbarui ulang
+stop - Keluar obrolan
+sharelink - Share kontak
+```
+
 Tinggal salin tempel ke pengaturan edit bot edit command di bot father
 
 ### CREDIT
