@@ -113,7 +113,7 @@ def handle(update):
 			text = "Pengguna Online Saat Ini : " + str(len(file)) + " Online👤"
 			bot.sendMessage(uid, text)
 
-		elif text == '/sharelink':
+		if text == '/sharelink':
 			if str(uid) in queue:
 				name = update["from"]["first_name"]
 				_id = update["from"]["id"]
@@ -133,20 +133,20 @@ def handle(update):
 				_id = update["from"]["id"]
 				bot.sendMessage(uid, f"Nama = {name}\nID = `{_id}`\nBahasa = {bahasa}", parse_mode="MarkDown")
 
-		elif text == "/search":
-			if uid in queue["occupied"]:
+		if text == "/search":
+			if not uid in queue["occupied"]:
 				bot.sendMessage(uid, '_Sedang mencari pasangan ngobrol kamu, Mohon tunggu sebentar..._',parse_mode='MarkDown', reply_markup=keyboard)
 				print("[SB] " + str(uid) + " Join ke obrolan")
 				queue["free"].append(uid)
 
-		elif text == '/stop' and uid in queue["occupied"]:
+		if text == '/stop' and uid in queue["occupied"]:
 			print('[SB] ' + str(uid) + ' meninggalkan jodohnya ' + str(queue["occupied"][uid]))
 			bot.sendMessage(uid, "🔸 _Obrolan telah berakhir_", parse_mode='MarkDown', reply_markup=keyboard)
 			bot.sendMessage(queue["occupied"][uid], "🔹 _Pasangan kamu keluar dari obrolan_", parse_mode='MarkDown', reply_markup=keyboard)
 			del queue["occupied"][queue["occupied"][uid]]
 			del queue["occupied"][uid]
 		
-		elif text == "/next" and uid in queue["occupied"]:
+		if text == "/next" and uid in queue["occupied"]:
 			print('[SB] ' + str(uid) + ' meninggalkan obrolan dengan ' + str(queue["occupied"][uid]))
 			bot.sendMessage(uid, "_🛑 Obrolan telah berakhir!_",parse_mode="MarkDown")
 			bot.sendMessage(queue["occupied"][uid], "_🛑 Obrolan telah berakhir!_",parse_mode="MarkDown", reply_markup=keyboard)
