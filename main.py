@@ -135,7 +135,6 @@ def handle(update):
 
 		elif text == "/search":
 			if uid in queue["occupied"]:
-				keyboard = ReplyKeyboardRemove()
 				bot.sendMessage(uid, '_Sedang mencari pasangan ngobrol kamu, Mohon tunggu sebentar..._',parse_mode='MarkDown', reply_markup=keyboard)
 				print("[SB] " + str(uid) + " Join ke obrolan")
 				queue["free"].append(uid)
