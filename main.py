@@ -211,7 +211,7 @@ def handle(update):
 				queue["occupied"][uid] = partner
 				queue["occupied"][partner] = uid
 				bot.sendMessage(uid, '_🎈Pasangan kamu telah ditemukan, selamat mengobrol_',parse_mode='MarkDown', reply_markup=keyboard)
-				bot.sendMessage(partner, '_🎈Pasangan kamu telah ditemukann, selamat mengobrol_',parse_mode='MarkDown', reply_markup=keyboard)
+				bot.sendMessage(partner, '_🎈Pasangan kamu telah ditemukan, selamat mengobrol_',parse_mode='MarkDown', reply_markup=keyboard)
 	except 	Exception as e:
 		print('[!] Error: ' + str(e))
 
