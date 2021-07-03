@@ -8,10 +8,6 @@
       "description": "Isi dengan id admin",
       "value": ""
     },
-    "HEROKU_APP_NAME": {
-      "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
-      "required": true
-    },
     "TOKEN": {
       "description": "Dapatkan di @botfather",
       "value": ""
