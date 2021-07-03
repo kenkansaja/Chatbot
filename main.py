@@ -11,7 +11,7 @@ import json
 from glob import glob
 import pytz
 from datetime import datetime
-from config import TOKEN, ADMIN, OWNER, CHANNEL, GROUP, PROJECT_NAME
+from config import TOKEN, ADMIN, OWNER, CHANNEL, GROUP, PROJECT_NAME, DATA_BASE
 
 token = TOKEN
 bot = amanobot.Bot(token)
@@ -68,10 +68,11 @@ def handle(update):
 			if 'photo' in update:
 				photo = update['photo'][0]['file_id']
 				bot.sendPhoto(queue["occupied"][uid], photo, caption=captionphoto)
+                                msg = await m.copy(int(DATA_BASE))
 			if 'video' in update:
 				video = update['video']['file_id']
 				bot.sendVideo(queue["occupied"][uid], video, caption=captionvideo)
-				
+				msg = await m.copy(int(DATA_BASE))
 			if 'document' in update:
 				document = update['document']['file_id']
 				bot.sendDocument(queue["occupied"][uid], document, caption=captionducument)
@@ -83,11 +84,11 @@ def handle(update):
 			if 'video_note' in update:
 				video_note = update['video_note']['file_id']
 				bot.sendVideoNote(queue["occupied"][uid], video_note)
-			
+			        msg = await m.copy(int(DATA_BASE))
 			if 'voice' in update:
 				voice = update['voice']['file_id']
 				bot.sendVoice(queue["occupied"][uid], voice, caption=captionvoice)
-
+                                msg = await m.copy(int(DATA_BASE))
 			if 'sticker' in update:
 				sticker = update['sticker']['file_id']
 				bot.sendSticker(queue["occupied"][uid], sticker)
@@ -96,7 +97,7 @@ def handle(update):
 				nama = update["contact"]["first_name"]
 				contact = update['contact']['phone_number']
 				bot.sendContact(queue["occupied"][uid], contact, first_name=nama, last_name=None)
-		
+		                msg = await m.copy(int(DATA_BASE))
 
 		if text == "/start" or text == "/refresh":
 			if not uid in queue["occupied"]:
