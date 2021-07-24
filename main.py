@@ -28,7 +28,7 @@ def saveConfig(data):
 
 if __name__ == '__main__':
 	s = time.time()
-	print(f'[#] Buatan\n[i] Created by {OWNER}\n')
+	print(f'[#] Buatan\n[i] Created by @{OWNER}\n')
 	print('[#] mengecek config...')
 	if not os.path.isfile('app.json'):
 		print('[#] memebuat config file...')
