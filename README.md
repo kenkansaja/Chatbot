@@ -19,6 +19,7 @@
 🇺 🇸 🇦 🇭 🇦 🇮 🇳   🇰 🇦 🇸 🇮 🇭   
 🇧 🇮 🇳 🇹 🇦 🇳 🇬   🇾 🇦
 
+Note : MAAF KAK KARENA GAK DI CEK TERNYATA ADA KESALAHAN UDAH DI FIX DAN SIAP DI PAKE
 
 # CHATBOT
 
