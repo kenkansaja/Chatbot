@@ -52,5 +52,7 @@ Tinggal salin tempel ke pengaturan edit bot edit command di bot father
 * [DAVI](https://github.com/davi78/chatbotdavi) - chatbotdavi
 * [KEN KAN](https://github.com/kenkannih/Chatbot) - Chatbot
 
+## REPO TERBARU
 
+[ANON-BOT](https://github.com/kenkansaja/TelegramChat)
 
