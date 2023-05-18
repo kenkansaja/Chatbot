@@ -57,5 +57,5 @@ Tinggal salin tempel ke pengaturan edit bot edit command di bot father
 [ANON-BOT](https://github.com/kenkansaja/TelegramChat)
 
 ## Bot Anon
-  [Anonymous Chat](t.me/Chatduabot) - Sumber kode di jual bagi yang minat hubungi [@pySmartDL](t.me/pySmartDL)
+  [Anonymous Chat](https://t.me/Chatduabot) - Sumber kode di jual bagi yang minat hubungi [@pySmartDL](https://t.me/pySmartDL)
 
